@@ -10,7 +10,7 @@ module.exports = function SkillResets(mod) {
 
     let model
 	
-	mod.hook('S_LOGIN', 12, event => { model = event.templateId })		 
+	mod.hook('S_LOGIN', mod.majorPatchVersion >= 81 ? 13 : 12, event => { model = event.templateId })		 
 
     mod.hook('S_CREST_MESSAGE', 2, ({ type, skill }) => {
         if (skillResetType !== type) return
