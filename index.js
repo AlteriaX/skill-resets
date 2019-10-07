@@ -4,16 +4,15 @@ const config = require('./config.json')
 
 module.exports = function SkillResets(mod) {
 
-    const skillResetType = 6
     const succesiveSkillResets = new Map()
     const skillResetsLog = new Map()
 
     let model
 	
-	mod.hook('S_LOGIN', mod.majorPatchVersion >= 81 ? 13 : 12, event => { model = event.templateId })		 
+	mod.hook('S_LOGIN', 13, event => { model = event.templateId })		 
 
     mod.hook('S_CREST_MESSAGE', 2, ({ type, skill }) => {
-        if (skillResetType !== type) return
+        if (type !== 6 || skill === undefined) return
 
         // Count and store resets
         let tempCounter = 1

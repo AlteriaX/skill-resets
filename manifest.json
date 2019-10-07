@@ -1,5 +1,9 @@
 {
 	"files": {
-		"index.js": "d193fed0216ec944ec944cc09525f67da2488112969e39084151c85c7f6d284f"
+		"config.json": {
+			"overwrite": false,
+			"hash": "68a9c3889565b947b61660045593abe4fa6552455821a1e1d0778a4948f56a65"
+		},
+		"index.js": "b8aba0b37c7f8d8df94e0279d31785415aa420c7f861b7c974c5a38e272299d5"
 	}
 }
