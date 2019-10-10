@@ -1,6 +1,8 @@
 // Thanks Leiki uwu
 
-const config = require('./config.json')
+const config = require('./config.json'),
+	blacklist = [130900, 130901, 130902],
+	haymaker = [60941, 60946, 60951, 60956]
 
 module.exports = function SkillResets(mod) {
 
@@ -12,7 +14,9 @@ module.exports = function SkillResets(mod) {
 	mod.hook('S_LOGIN', 13, event => { model = event.templateId })		 
 
     mod.hook('S_CREST_MESSAGE', 2, ({ type, skill }) => {
-        if (type !== 6 || skill === undefined) return
+        if (type !== 6 || skill === undefined || blacklist.includes(skill)) return
+		
+		if(haymaker.includes(skill)) skill = 60901
 
         // Count and store resets
         let tempCounter = 1
