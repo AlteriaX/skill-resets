@@ -10,8 +10,8 @@ module.exports = function SkillResets(mod) {
     const skillResetsLog = new Map()
 
     let model
-	
-	mod.hook('S_LOGIN', 13, event => { model = event.templateId })		 
+
+	mod.hook('S_LOGIN', mod.majorPatchVersion >= 86 ? 14 : 13, event => { model = event.templateId })		 
 
     mod.hook('S_CREST_MESSAGE', 2, ({ type, skill }) => {
         if (type !== 6 || skill === undefined || blacklist.includes(skill)) return
