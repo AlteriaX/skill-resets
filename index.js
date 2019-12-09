@@ -2,7 +2,7 @@
 
 const config = require('./config.json'),
 	blacklist = [130900, 130901, 130902],
-	haymaker = [60941, 60946, 60951, 60956]
+	haymaker = [60941, 60942, 60946, 60947, 60951, 60952, 60956, 60957, 60961, 60962, 60966, 60967]
 
 module.exports = function SkillResets(mod) {
 
@@ -11,7 +11,7 @@ module.exports = function SkillResets(mod) {
 
     let model
 
-	mod.hook('S_LOGIN', mod.majorPatchVersion >= 86 ? 14 : 13, event => { model = event.templateId })		 
+	mod.hook('S_LOGIN', 14, event => { model = event.templateId })		 
 
     mod.hook('S_CREST_MESSAGE', 2, ({ type, skill }) => {
         if (type !== 6 || skill === undefined || blacklist.includes(skill)) return
