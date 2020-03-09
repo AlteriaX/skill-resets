@@ -3,6 +3,6 @@
     "name": "skill-resets",
     "author": "Alteria",
     "description": "Shows pop up message whenever a skill resets.",
-    "servers": ["https://raw.githubusercontent.com/AlteriaX/skill-resets/master/"],
-	"supportUrl": "https://github.com/AlteriaX/skill-resets/issues"
+    "servers": ["https://raw.githubusercontent.com/solitaryflower/skill-resets/master/"],
+	"supportUrl": "https://github.com/solitaryflower/skill-resets/issues"
 }
