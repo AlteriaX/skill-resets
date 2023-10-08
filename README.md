@@ -6,4 +6,4 @@ Shows pop up message whenever a skill resets.
 
 Open up ``config.json`` to change the image size and font size + colour.
 
-![](https://thumbs.gfycat.com/CourteousLightheartedCaribou-size_restricted.gif)
+![](https://media.giphy.com/media/q6QhkESeWM6DWrNZdO/giphy.gif)
